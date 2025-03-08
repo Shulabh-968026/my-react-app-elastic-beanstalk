@@ -1,1 +1,1 @@
-web: serve -s dist -l 8080
+web: serve -s dist -p 8080
