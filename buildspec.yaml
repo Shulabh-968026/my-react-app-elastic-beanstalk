@@ -1,0 +1,24 @@
+version: .2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: latest
+    commands:
+      - echo installing dependencies
+      - npm install 
+  
+  build:
+    commands:
+      - echo build the projects
+      - npm run build
+
+  post_build:
+    commands:
+      - echo build completed successfully.
+
+artifacts:
+  files:
+    - '**/*'
+  base-directory: dist
+  discard-paths: yes
