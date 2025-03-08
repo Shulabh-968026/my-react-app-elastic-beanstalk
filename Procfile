@@ -1,1 +1,1 @@
-web: serve -s dist -l 8080
+web: npx serve -s dist -l 8080
