@@ -1,0 +1,1 @@
+web: serve -s dist -p 8080
