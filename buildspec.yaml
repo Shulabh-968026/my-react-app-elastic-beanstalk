@@ -12,8 +12,12 @@ phases:
     commands:
       - echo "Building the project"
       - npm run build
-      - ls -l dist  # Debugging step: List contents of dist folder
-      - test -d dist || (echo "Error: dist/ folder missing!" && exit 1)  # Fail if dist/ is missing
+      - ls -l dist  # ✅ Debugging: List contents of dist folder
+      - |
+        if [ ! -d "dist" ]; then
+          echo "❌ Error: dist/ folder missing!"
+          exit 1
+        fi
 
   post_build:
     commands:
