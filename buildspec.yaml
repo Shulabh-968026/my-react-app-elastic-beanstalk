@@ -1,21 +1,23 @@
-version: .2
+version: 0.2
 
 phases:
   install:
     runtime-versions:
       nodejs: latest
     commands:
-      - echo installing dependencies
+      - echo "Installing dependencies"
       - npm install 
   
   build:
     commands:
-      - echo build the projects
+      - echo "Building the project"
       - npm run build
+      - ls -l dist  # Debugging step: List contents of dist folder
+      - test -d dist || (echo "Error: dist/ folder missing!" && exit 1)  # Fail if dist/ is missing
 
   post_build:
     commands:
-      - echo build completed successfully.
+      - echo "Build completed successfully."
 
 artifacts:
   files:
