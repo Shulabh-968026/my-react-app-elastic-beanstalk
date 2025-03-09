@@ -26,5 +26,8 @@ phases:
 artifacts:
   files:
     - '**/*'
-  base-directory: dist
+    - 'Procfile'
+    - 'package.json'
+    - 'node_modules/**/*'
+  base-directory: .
   discard-paths: no
