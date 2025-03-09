@@ -22,12 +22,3 @@ phases:
   post_build:
     commands:
       - echo "Build completed successfully."
-
-artifacts:
-  files:
-    - 'package.json'
-    - 'Procfile'
-    - 'node_modules/**'
-    - 'dist/**'
-  base-directory: .
-  discard-paths: no
